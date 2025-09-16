@@ -1,0 +1,71 @@
+[ops-theme=realdark] {
+  .ant-btn-primary {
+    color: #fff;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    &:hover, &:focus {
+      background: var(--primary-color-hover);
+      border-color: var(--primary-color-hover);
+    }
+  }
+
+  --primary-color: #0D1C54;
+  --primary-color-hover: #2B3B75;
+  --primary-color-active: #0A1642;
+
+  --body-background: #F5F6F8;
+  --component-background: #FFFFFF;
+
+  --text-color: #252B3A;
+  --text-color-secondary: #575D6C;
+
+  --border-color-base: #DDDDDD;
+  --border-color-split: #E5E5E5;
+
+  --table-header-bg: #F5F6F8;
+  --table-header-color: #252B3A;
+  --table-row-hover-bg: #F2F4F8;
+
+  --input-bg: #FFFFFF;
+  --input-border-color: #DDDDDD;
+  --input-hover-border-color: #0D1C54;
+}
+
+.fade() {
+  @functions: ~`(function() {
+    this.fade = function(color, amount) {
+      if (String(color).indexOf('var(') === 0) {
+        if (color.indexOf('--primary-color') !== -1 ) {
+          var m = amount > 10 ? amount/10 :amount
+          return color.replace('-color)',  '-' + m + ')')
+        }
+        return color.replace(')',  '--fade--' + parseInt(amount) + ')')
+      }
+      return color
+    }
+  })()`;
+}
+.fade();
+
+
+
+// 表格搜索区域样式
+.table-search-wrapper {
+  background: #FFFFFF;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(13, 28, 84, 0.06);
+
+  .ant-form-item {
+    margin-bottom: 16px;
+  }
+
+  .search-buttons {
+    text-align: right;
+    
+    .ant-btn {
+      margin-left: 8px;
+    }
+  }
+}

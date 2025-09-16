@@ -1,0 +1,1 @@
+import{aD as s,c7 as a,J as u,ap as e}from"./index.872a2bd0.js";function n(){const n=s({});let r=null;const t=a();return u((()=>{r=t.value.subscribe((s=>{n.value=s}))})),e((()=>{t.value.unsubscribe(r)})),n}export{n as u};

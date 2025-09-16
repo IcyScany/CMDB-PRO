@@ -1,0 +1,1 @@
+import{aR as t}from"./index.872a2bd0.js";const e="security/cloud-cfw/",i={getOverview:()=>t.get(`${e}overview`),getList:i=>t.post(`${e}list`,i),getDetail:i=>t.get(`${e}list/${i}`),putEdit:(i,s)=>t.put(`${e}edit/${i}`,s)};export{i as A};

@@ -1,0 +1,31 @@
+@import 'vxe-pc-ui/styles/all.scss';
+@import 'vxe-table/styles/all.scss';
+// 变亮
+@function tint($color, $percentage) {
+    @return mix(white, $color, $percentage);
+}
+// 变暗
+@function shade($color, $percentage) {
+    @return mix(black, $color, $percentage);
+}
+
+
+// btn-danger类型ghost样式
+.vxe-button.type--button.theme--danger-ghost {
+    background-color: #ffffff;
+    color: var(--vxe-ui-status-danger-color);
+    border-color: var(--vxe-ui-status-danger-color);
+}
+// btn-success类型ghost样式
+.vxe-button.type--button.theme--success-ghost {
+    background-color: #ffffff;
+    color: var(--vxe-ui-status-success-color);
+    border-color: var(--vxe-ui-status-success-color);
+}
+// btn-warning类型ghost样式
+.vxe-button.type--button.theme--warning-ghost {
+    background-color: #ffffff;
+    color: var(--vxe-ui-status-warning-color);
+    border-color: var(--vxe-ui-status-warning-color);;
+}
+

@@ -1,0 +1,1 @@
+import{aR as t}from"./index.872a2bd0.js";const e="server/cloud-server/",s={getCloudServerOneList:s=>t.get(`${e}list/${s}`),putCloudServerEdit:(s,o)=>t.put(`${e}edit/${s}`,o),postAccountListApi:async s=>t.post(`${e}list`,s),postAccountAddDataApi:async s=>t.post(`${e}add`,s),getOverview:async()=>t.get(`${e}overview`)};export{s as c};

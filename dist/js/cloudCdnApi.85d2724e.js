@@ -1,0 +1,1 @@
+import{aR as t}from"./index.872a2bd0.js";const e="network/cloud_cdn/",o={getOverview:o=>t.post(`${e}overview`,o),postList:o=>t.post(`${e}list`,o),getDetail:o=>t.get(`${e}list/${o}`),postAdd:o=>t.post(`${e}add`,o),putEdit:(o,d)=>t.put(`${e}edit/${o}`,d),del:o=>t.delete(`${e}delete/${o}`),getNextHop:o=>t.get(`${e}next_hop/${o}`)};export{o as A};

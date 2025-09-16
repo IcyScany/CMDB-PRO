@@ -1,0 +1,1 @@
+import{aR as e}from"./index.872a2bd0.js";const t="security/security-group/",i={getOverview:()=>e.get(`${t}overview`,{showLoading:!0}),getList:i=>e.post(`${t}list`,i),getDetail:i=>e.get(`${t}list/${i}`),getSecurityGroupRule:i=>e.get(`${t}rule/list?security_group_id=${i}`)};export{i as A};

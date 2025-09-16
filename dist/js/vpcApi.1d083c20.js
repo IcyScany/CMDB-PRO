@@ -1,0 +1,1 @@
+import{aR as t}from"./index.872a2bd0.js";const e="network/vpc/",p="network/vpc-subnet/",i={getVpcList:p=>t.get(`${e}list${p?"/"+p:""}`),putVpcEdit:(p,i)=>t.put(`${e}edit/${p}`,i),getVpcSubnetList:e=>t.get(`${p}list/${e}`),postVpcSubnetList:e=>t.post(`${p}list`,e),putVpcSubnetEdit:(e,i)=>t.put(`${p}edit/${e}`,i),getOverview:()=>t.get("network/show/overview")};export{i as v};

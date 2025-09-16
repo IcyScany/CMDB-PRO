@@ -1,0 +1,1 @@
+import{aR as e}from"./index.872a2bd0.js";const t="monitor/expire_remind/",i={getOverview:i=>e.post(`${t}overview`,i),getList:()=>e.get(`${t}list`),getDetail:i=>e.get(`${t}list/${i}`),postAdd:i=>e.post(`${t}add`,i),putEdit:(i,s)=>e.put(`${t}edit/${i}`,s),deleteDel:i=>e.delete(`${t}delete/${i}`),getUserList:()=>e.get(`${t}user_list`)};export{i as A};

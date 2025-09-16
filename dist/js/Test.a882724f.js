@@ -1,0 +1,1 @@
+import{a3 as s,Q as a,R as n,X as r}from"./index.872a2bd0.js";const o={},t={class:"container mx-auto px-4 sm:px-6 lg:px-8 py-8"},e=[r("button",{class:"border--none p-2.5 bg-primary"},"123",-1)];const p=s(o,[["render",function(s,r){return a(),n("div",t,e)}]]);export{p as default};

@@ -1,0 +1,1 @@
+import{aR as t}from"./index.872a2bd0.js";const e="network/virtual-interfaces/",i={postList:i=>t.post(`${e}list`,i),getDetail:i=>t.get(`${e}list/${i}`),putEdit:(i,o)=>t.put(`${e}edit/${i}`,o),getOverview:()=>t.get("network/connection/show/overview")};export{i as A};

@@ -1,0 +1,1 @@
+import{aS as t,cD as e}from"./index.872a2bd0.js";function n({title:n,content:s="",duration:o=3e3,callback:c=null}){let a=t.success({title:n,content:s,zIndex:e});setTimeout((()=>{c&&c(),a.destroy()}),o)}export{n as s};

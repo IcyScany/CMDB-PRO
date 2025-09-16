@@ -1,0 +1,351 @@
+/*
+ 一些全局样式
+ */
+
+/*
+ 覆盖ant-design-vue样式
+ */
+// 按钮small
+.ant-btn-sm {
+    font-size: 0.75rem !important;
+    padding: 0 0.5rem;
+    height: 28px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+.ant-btn:not(:last-child) {
+    margin-right: 8px;
+}
+// 点击之后是focus状态，不覆盖显示的颜色偏灰，像不能使用
+.ant-btn-background-ghost.ant-btn-primary:focus {
+    color: @primary-color;
+    border-color: @primary-color;
+}
+.ant-btn-primary:focus {
+    background-color: @primary-color;
+    border-color: @primary-color;
+}
+// 链接形式的按钮
+.ant-btn.ant-btn-link {
+    padding: 0;
+}
+// 表单label换行
+.ant-form-item-label {
+    white-space: normal;
+    &>label {
+        min-height: 32px;
+        word-break: break-word;
+        height: auto;
+    }
+}
+// tabs标签页-标签栏
+.ant-tabs-bar {
+    margin-bottom: 0;
+}
+// 对表单的提示框
+.ant-form-item-explain, .ant-form-item-extra{
+    min-height: 10px;
+}
+
+.ant-btn-success {
+    &.ant-btn-background-ghost{
+        color: @success-color;
+        background: transparent;
+        border-color: @success-color;
+        text-shadow: none;
+    }
+    &.ant-btn-primary {
+        background-color: @success-color;
+        border-color: @success-color;
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+    }
+}
+
+
+
+/*
+ 覆盖vxe-table样式
+ */
+// grid组件toolbar边距
+.vxe-grid--toolbar-wrapper {
+    margin: 0 1.5rem;
+}
+.vxe-tools--operate {
+    margin-left: 0.8rem;
+}
+// grid组件page边距
+.vxe-grid--pager-wrapper {
+    margin: 0 1.5rem;
+}
+// 按钮mini尺寸的padding
+.vxe-button.type--button:not(.is--circle).size--mini {
+    padding: 0 0.5rem;
+    font-weight: 600;
+}
+// btn-info类型样式
+.vxe-button.type--button.theme--btn-info {
+    background-color: @text-info-color;
+    color: #ffffff;
+    border-color: @text-info-color;
+}
+// btn-info类型ghost样式
+.vxe-button.type--button.theme--btn-info-ghost {
+    background-color: #ffffff;
+    color: @text-info-color;
+    border-color: @text-info-color;
+}
+// vxe-modal底部的按钮处理
+.vxe-modal--wrapper .vxe-modal--footer {
+    position: sticky;
+    bottom: 0px;
+}
+
+/*
+ 自定义全局样式
+ */
+.iconfont {
+    font-size: inherit;
+}
+// 一般用于页面内表格上方的模块（按钮搜索等）
+.part-box {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+}
+// 表格里'操作'列的icon
+.table-opera-icon {
+    cursor: pointer;
+    &:not(:first-child) {
+        margin-left: 5px;
+    }
+}
+// 自定义表格（原生table）相关
+// 表格外层div，包裹表格产生横向滚动条，防止表格撑开超出页面
+.custom-table-responsive {
+    overflow-x: auto;
+}
+// 自定义表格
+.custom-table {
+    width: 100%;
+    th {
+        background-color: #f6f9fc;
+    }
+    // 表格行背景（不同状态）
+    .tr-danger {
+        background: #fcc7d1;
+        th, td {
+            border-color: #fa96aa;
+        }
+    }
+    .tr-success {
+        background: #c4f1de;
+        th, td {
+            border-color: #92e6c2;
+        }
+    }
+}
+// 边框样式表格
+.custom-table-bordered {
+    th, td {
+        border: 1px solid #e9ecef;
+        padding: 2px 10px;
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+}
+// 字体颜色
+.text-primary {
+    color: @primary-color !important;
+}
+.text-success {
+    color: @success-color !important;
+}
+.text-error {
+    color: @error-color !important;
+}
+.text-white {
+    color: #ffffff;
+}
+.text-info {
+    color: @text-info-color;
+}
+.text-pink {
+    color: @pink-color;
+}
+.text-orange {
+    color: @orange-color;
+}
+.text-green {
+    color: @green-color;
+}
+.text-yellow {
+    color: #ffd600;
+}
+// 渐变背景色
+.bg-gradient-pink {
+    background: linear-gradient(87deg, @pink-color 0, #f3b4a4 100%);
+}
+.bg-gradient-purple {
+    background: linear-gradient(87deg, #8965e0 0, #bc65e0 100%);
+}
+.bg-gradient-success {
+    background: linear-gradient(87deg, @green-color 0, #2dcecc 100%);
+}
+.bg-gradient-danger {
+    background: linear-gradient(87deg, #f5365c 0, #f56036 100%);
+}
+.bg-gradient-primary {
+    background: linear-gradient(87deg, @primary-color 0, #825ee4 100%);
+}
+.bg-gradient-info {
+    background: linear-gradient(87deg, #11cdef 0, #1171ef 100%);
+}
+.bg-gradient-orange {
+    background: linear-gradient(87deg, @orange-color 0, #fbb140 100%);
+}
+// 透明度背景色
+.bg-opacity-red {
+    background: rgba(253, 1, 15, 0.3) !important;
+}
+.bg-opacity-yellow {
+    background: rgba(255,230,4,0.3) !important;
+}
+.bg-translucent-primary {
+    background-color: rgba(63, 87, 223, .6) !important;
+}
+.bg-translucent-neutral {
+    background-color: rgba(237, 237, 237, .6) !important;
+}
+// 背景色
+.bg-dark {
+    background: #172b4d;
+}
+.bg-primary {
+    background-color: @primary-color;
+    color: #ffffff;
+}
+.bg-success {
+    background-color: @green-color;
+}
+.bg-danger {
+    background-color: @danger-color;
+}
+// 上方圆角的标题
+.badge-title {
+    padding: 0.25rem 0.5rem;
+    border-radius: calc(0.375rem - 1px) calc(0.375rem - 1px) 0 0;
+}
+// 圆角标签
+.badge {
+    font-size: 0.75em;
+    font-weight: bold;
+    display: inline-block;
+    padding: 0.35rem 0.875rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 10rem;
+}
+.badge-primary {
+    color: white;
+    background-color: #5e72e4;
+}
+.badge-danger {
+    color: #f80031;
+    background-color: #fdd1da;
+}
+.badge-success {
+    color: #1aae6f;
+    background-color: #b0eed3;
+}
+// 命令行风格
+.cmd-style {
+    background-color: black;
+    color: #fff;
+    font-size: 13px;
+    padding: 9.5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+// 告警等级
+.btn-alert-level {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.75rem !important;
+    padding: 0 0.5rem;
+    height: 28px;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 28px;
+    border: 1px solid;
+    color: #000;
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+    &.alert-level-P0 {
+        border-color: @alert-level-P0;
+        &.active {
+            background-color: @alert-level-P0;
+        }
+    }
+    &.alert-level-P1 {
+        border-color: @alert-level-P1;
+        &.active {
+            background-color: @alert-level-P1;
+        }
+    }
+    &.alert-level-P2 {
+        border-color: @alert-level-P2;
+        &.active {
+            background-color: @alert-level-P2;
+        }
+    }
+    &.alert-level-P3 {
+        border-color: @alert-level-P3;
+        &.active {
+            background-color: @alert-level-P3;
+        }
+    }
+}
+
+
+/*定时刷新的进度条相关*/
+@keyframes barprogress {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+
+    }
+}
+
+.progress-top-bar {
+    height: 3px;
+    .progress-bar {
+        display: flex;
+        flex-direction: column;
+        transition: width .6s ease;
+        text-align: center;
+        white-space: nowrap;
+        color: #fff;
+        background-color: #5e72e4;
+        justify-content: center;
+        border-radius: 0;
+        box-shadow: none;
+        animation: 10s linear 0s infinite normal none running  barprogress;
+        background-image: linear-gradient(to right, rgb(16, 142, 233), rgb(135, 208, 104));
+        background: -webkit-linear-gradient(90deg, #f92bbf,#a411a8,#8e6693,#7c98d3,#f4b1a8);/* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(90deg, #f92bbf,#a411a8,#8e6693,#7c98d3,#f4b1a8);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: 5px;
+        width: 100%
+    }
+}
+
+/** 去除a-modal弹窗的报错 **/
+.ant-modal[aria-hidden=true] {
+    display: none !important;
+}

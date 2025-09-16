@@ -1,0 +1,1 @@
+import{aR as t}from"./index.872a2bd0.js";const i="data-linking/feishu-to-jira/",e={postList:e=>t.post(`${i}list`,e),getOverview:()=>t.get(`${i}overview`,{showLoading:!0}),getDetail:e=>t.get(`${i}list/${e}`,{showLoading:!0})};export{e as f};
